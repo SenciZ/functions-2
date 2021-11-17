@@ -5,11 +5,11 @@
   Uncomment the answer underneath.
 */
 
-// const exclaim = function(str) {
-//   return str.toUpperCase() + '!!!'
-// }
+const exclaim = function(str) {
+  return str.toUpperCase() + '!!!'
+}
 
-// arrow
+arrow
 // declaration
 // expression
 
@@ -22,13 +22,13 @@
   Uncomment the answer underneath.
 */
 
-// const exclaimTwo = str => {
-//   return str.toUpperCase() + '!!!'
-// }
+const exclaimTwo = str => {
+  return str.toUpperCase() + '!!!'
+}
 
 // arrow
 // declaration
-// expression
+expression
 
 /*
   Rewrite exclaimTwo to be a single line.
@@ -37,7 +37,7 @@
   Brownie points if you use a template string
 */
 
-// const exclaimThree = str => str.toUpperCase()+ "!!!";
+const exclaimThree = str => str.toUpperCase()+ "!!!";
 
 
 ////////// PROBLEM 3 //////////
@@ -47,12 +47,12 @@
   Uncomment the answer underneath.
 */
 
-// function exclaimFour(str) {
-//   return str.toUpperCase() + '!!!'
-// }
+function exclaimFour(str) {
+  return str.toUpperCase() + '!!!'
+}
 
 // arrow
-// declaration
+declaration
 // expression
 
 
