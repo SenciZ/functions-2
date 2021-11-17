@@ -5,9 +5,9 @@
   Uncomment the answer underneath.
 */
 
-const exclaim = function(str) {
-  return str.toUpperCase() + '!!!'
-}
+// const exclaim = function(str) {
+//   return str.toUpperCase() + '!!!'
+// }
 
 // arrow
 // declaration
@@ -22,9 +22,9 @@ const exclaim = function(str) {
   Uncomment the answer underneath.
 */
 
-const exclaimTwo = str => {
-  return str.toUpperCase() + '!!!'
-}
+// const exclaimTwo = str => {
+//   return str.toUpperCase() + '!!!'
+// }
 
 // arrow
 // declaration
@@ -37,6 +37,7 @@ const exclaimTwo = str => {
   Brownie points if you use a template string
 */
 
+// const exclaimThree = str => str.toUpperCase()+ "!!!";
 
 
 ////////// PROBLEM 3 //////////
@@ -46,9 +47,9 @@ const exclaimTwo = str => {
   Uncomment the answer underneath.
 */
 
-function exclaimFour(str) {
-  return str.toUpperCase() + '!!!'
-}
+// function exclaimFour(str) {
+//   return str.toUpperCase() + '!!!'
+// }
 
 // arrow
 // declaration
@@ -64,7 +65,9 @@ function exclaimFour(str) {
 
 //CODE HERE
 
+let jsNinja = () => "I am a Javascript Ninja!"
 
+console.log(jsNinja())
 
 ////////// PROBLEM 5 //////////
 
@@ -77,8 +80,13 @@ function exclaimFour(str) {
     Brownie points if you use a ternary statement (only spend significant time on this if you have wiggle room)
 */
 
-//CODE HERE
-
+const compareNums = (num1, num2) => {
+  if(num1 === num2){
+    return num1;
+  } else {
+    return Math.max(num1, num2);
+  }
+}
   
 ////////// PROBLEM 6 //////////
 
@@ -93,4 +101,6 @@ function exclaimFour(str) {
     that out)
 */
 
-//CODE HERE
+const bestMovie = str => `${str} is the best movie ever!`;
+
+console.log(bestMovie("Twister"))
