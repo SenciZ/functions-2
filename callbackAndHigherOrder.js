@@ -7,6 +7,9 @@
 
 // CODE HERE
 
+// const multiply = (num1, num2, callback) => {
+//   callback(num1 * num2);
+// }
 
 // UNCOMMENT THE FUNCTION CALL BELOW
 // RUN THIS FILE WITH NODE
@@ -23,7 +26,7 @@
 // The names array will be used in problems 2 - 6.
 
 // Do not edit the code below.
-var names = ['Tyler', 'Cahlan', 'Ryan', 'Colt', 'Tyler', 'Blaine', 'Cahlan']
+// var names = ['Tyler', 'Cahlan', 'Ryan', 'Colt', 'Tyler', 'Blaine', 'Cahlan']
 // Do not edit the code above.
 
 
@@ -35,7 +38,7 @@ var names = ['Tyler', 'Cahlan', 'Ryan', 'Colt', 'Tyler', 'Blaine', 'Cahlan']
   Then invoke the callback function, passing in the first element in the array as it's argument.
 */
 
-// CODE HERE 
+// const first = (arr, callback) => callback(arr[0]);
 
 
 // UNCOMMENT THE FUNCTION CALL BELOW
@@ -55,8 +58,7 @@ var names = ['Tyler', 'Cahlan', 'Ryan', 'Colt', 'Tyler', 'Blaine', 'Cahlan']
   Then invoke the callback, passing in the last element in the array as the argument.
 */
 
-// CODE HERE
-
+// const last = (arr, callback) => callback(arr[arr.length-1]);
 
 // UNCOMMENT THE FUNCTION CALL BELOW
 // RUN THIS FILE WITH NODE
@@ -77,14 +79,21 @@ var names = ['Tyler', 'Cahlan', 'Ryan', 'Colt', 'Tyler', 'Blaine', 'Cahlan']
   If the name does not exist, invoke the callback with false as the argument.
 */
 
-// CODE HERE 
-
+// const contains = (arr, name, myFunction) => {
+//   if(arr.includes(name)){
+//     myFunction(true)
+//   } else {
+//     myFunction(false)
+//   }
+// }
 
 // UNCOMMENT THE FUNCTION CALL BELOW
 // RUN THIS FILE WITH NODE
 // CHECK YOUR ANSWER
 
-// contains(names, 'Colt', result => {
+// let sample = 'Colt'
+
+// contains(names, sample, (result) => {
 //   if(result === true){
 //     console.log('Colt is in the array')
 //   } else {
@@ -101,8 +110,31 @@ var names = ['Tyler', 'Cahlan', 'Ryan', 'Colt', 'Tyler', 'Blaine', 'Cahlan']
   Remove any duplicate values from the array, and invoke the callback with the modified array as an argument.
   Hint: you can use a nested for loop to do this.
 */
+var namesArray = ['Tyler', 'Cahlan', 'Ryan', 'Colt', 'Tyler', 'Blaine', 'Cahlan']
 
-// CODE HERE
+const uniq = (arr, callback) => {
+  // for(let i =0; i <arr.length; i++){
+  //   for(let j = 0; j < arr.length; j++){
+  //     if(i !== j){
+  //       if(arr[i] === arr[j]){
+  //         arr.splice(j,1)
+  //       }
+  //     }
+  //   }
+  // }
+
+  arr.forEach((name, indexA) => {
+    arr.forEach((element,indexB) => {
+      if (indexA !== indexB) {
+        if (name === element) {
+          arr.splice(indexB, 1);
+        }
+      }
+    });
+  });
+  callback(arr);
+};
+
 
 /*
   Invoke the uniq function, passing in the names array from above and a callback function.
@@ -111,7 +143,7 @@ var names = ['Tyler', 'Cahlan', 'Ryan', 'Colt', 'Tyler', 'Blaine', 'Cahlan']
   'The new names array with all the duplicate items removed is [UNIQARRPARAM].'
 */
 
-// CODE HERE
+uniq(namesArray, (uniqArr) => {console.log(`The new names array with all the duplicate items removed is ${uniqArr}.`)})
 
 
 
@@ -123,7 +155,9 @@ var names = ['Tyler', 'Cahlan', 'Ryan', 'Colt', 'Tyler', 'Blaine', 'Cahlan']
 */
 
 // CODE HERE 
-
+// const each = (arr, callback) => {
+//   arr.forEach((item, index) => callback(item, index))
+// }
 
 /*
   Invoke the each function, passing in the names array and a callback function.
@@ -132,7 +166,8 @@ var names = ['Tyler', 'Cahlan', 'Ryan', 'Colt', 'Tyler', 'Blaine', 'Cahlan']
   'The item at index [INDEXPARAM] is [ITEMPARAM].'
 */
 
-// CODE HERE
+// each(names, (item, index) => console.log(`The item at ${index} is ${item}`))
+
 
 
 ////////// PROBLEM 7 //////////
@@ -164,9 +199,18 @@ var users = [
   },
 ]
 // Do not edit the code above.
+/*
+  Write a function called getUserById that takes in three parameters: an array of objects (users), an id and a callback, and searches for the user with a matching id.
+  When the correct user object is found, invoke the callback with the user object as an argument.
+*/
 
-// CODE HERE 
-
+// const getUserById = (arr, id, callback) => {
+//   arr.forEach((name, index) => {
+//     if(name.id === id){
+//       callback(arr[index])
+//     }
+//   })
+// }
 
 // UNCOMMENT THE FUNCTION CALL BELOW
 // RUN THIS FILE WITH NODE
@@ -192,8 +236,9 @@ var users = [
   the two parameters together and return the sum.
 */
 
-// CODE HERE
-
+// const addingFactory = number =>{
+//   return (num) =>
+// }
 /*
   Now that you have addingFactory, you can create other
   functions from it. 
