@@ -21,10 +21,12 @@ const newMixedNumbers = mixedNumbers.filter(element => {
   return(element % 2 === 0 ? true : false)
 })
 
-console.log(newMixedNumbers);
 // CODE HERE
-//const evenNumbers // = mixedNumbers.filter(/* Provide Your Callback Here */)
+const evenNumbers = mixedNumbers.filter(element => {
+  return(element % 2 === 0 ? true : false)
+})
 
+console.log(evenNumbers);
 
 
 ////////// PROBLEM 2 //////////
@@ -44,8 +46,8 @@ const prices = [15.00, 23.00, 78.00, 34.00, 12.00, 86.00, 12.00, 79.00, 32.00];
 */
 
 // CODE HERE
-//const postTaxPrices // = prices.map(/* Provide Your Callback Here );
-
+const postTaxPrices  = prices.map(element => element = element * 1.07);
+console.log(postTaxPrices)
 
 
 ////////// PROBLEM 3 //////////
@@ -62,7 +64,8 @@ const populations = [8175133, 3792621, 2695598, 2100263];
 */
 
 // CODE HERE
-//const totalPopulation //  = populations.reduce(/* Provide Your Callback Here */)
+const totalPopulation  = populations.reduce((acc, current) => acc += current)
+console.log(totalPopulation)
 
 
 
