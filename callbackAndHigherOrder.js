@@ -7,17 +7,17 @@
 
 // CODE HERE
 
-// const multiply = (num1, num2, callback) => {
-//   callback(num1 * num2);
-// }
+const multiply = (num1, num2, callback) => {
+  callback(num1 * num2);
+}
 
 // UNCOMMENT THE FUNCTION CALL BELOW
 // RUN THIS FILE WITH NODE
 // CHECK YOUR ANSWER
 
-// multiply(4, 3, answer => {
-//   console.log('The answer is ' + answer) //should console.log 12
-// })
+multiply(4, 3, answer => {
+  console.log('The answer is ' + answer) //should console.log 12
+})
 
 
 
@@ -26,7 +26,7 @@
 // The names array will be used in problems 2 - 6.
 
 // Do not edit the code below.
-// var names = ['Tyler', 'Cahlan', 'Ryan', 'Colt', 'Tyler', 'Blaine', 'Cahlan']
+var names = ['Tyler', 'Cahlan', 'Ryan', 'Colt', 'Tyler', 'Blaine', 'Cahlan']
 // Do not edit the code above.
 
 
@@ -38,16 +38,16 @@
   Then invoke the callback function, passing in the first element in the array as it's argument.
 */
 
-// const first = (arr, callback) => callback(arr[0]);
+const first = (arr, callback) => callback(arr[0]);
 
 
 // UNCOMMENT THE FUNCTION CALL BELOW
 // RUN THIS FILE WITH NODE
 // CHECK YOUR ANSWER
 
-// first(names, firstName => {
-//   console.log('The first name in names is ' + firstName)
-// })
+first(names, firstName => {
+  console.log('The first name in names is ' + firstName)
+})
 
 
 
@@ -58,15 +58,15 @@
   Then invoke the callback, passing in the last element in the array as the argument.
 */
 
-// const last = (arr, callback) => callback(arr[arr.length-1]);
+const last = (arr, callback) => callback(arr[arr.length-1]);
 
 // UNCOMMENT THE FUNCTION CALL BELOW
 // RUN THIS FILE WITH NODE
 // CHECK YOUR ANSWER
 
-// last(names, lastName => {
-//   console.log('The last name in names is ' + lastName)
-// })
+last(names, lastName => {
+  console.log('The last name in names is ' + lastName)
+})
 
 
 
@@ -79,27 +79,26 @@
   If the name does not exist, invoke the callback with false as the argument.
 */
 
-// const contains = (arr, name, myFunction) => {
-//   if(arr.includes(name)){
-//     myFunction(true)
-//   } else {
-//     myFunction(false)
-//   }
-// }
+const contains = (arr, name, myFunction) => {
+  if(arr.includes(name)){
+    myFunction(true)
+  } else {
+    myFunction(false)
+  }
+}
 
 // UNCOMMENT THE FUNCTION CALL BELOW
 // RUN THIS FILE WITH NODE
 // CHECK YOUR ANSWER
 
-// let sample = 'Colt'
 
-// contains(names, sample, (result) => {
-//   if(result === true){
-//     console.log('Colt is in the array')
-//   } else {
-//     console.log('Colt is not in the array')
-//   }
-// })
+contains(names, 'Colt', (result) => {
+  if(result === true){
+    console.log('Colt is in the array')
+  } else {
+    console.log('Colt is not in the array')
+  }
+})
 
 
 
@@ -112,28 +111,30 @@
 */
 // var namesArray = ['Tyler', 'Cahlan', 'Ryan', 'Colt', 'Tyler', 'Blaine', 'Cahlan']
 
-// const uniq = (arr, callback) => {
-  // for(let i =0; i <arr.length; i++){
-  //   for(let j = 0; j < arr.length; j++){
-  //     if(i !== j){
-  //       if(arr[i] === arr[j]){
-  //         arr.splice(j,1)
+const uniq = (arr, callback) => {
+  for(let i =0; i <arr.length; i++){
+    for(let j = 0; j < arr.length; j++){
+      if(i !== j){
+        if(arr[i] === arr[j]){
+          arr.splice(j,1)
+        }
+      }
+    }
+  }
+
+  OR
+
+  // arr.forEach((name, indexA) => {
+  //   arr.forEach((element,indexB) => {
+  //     if (indexA !== indexB) {
+  //       if (name === element) {
+  //         arr.splice(indexB, 1);
   //       }
   //     }
-  //   }
-  // }
-
-//   arr.forEach((name, indexA) => {
-//     arr.forEach((element,indexB) => {
-//       if (indexA !== indexB) {
-//         if (name === element) {
-//           arr.splice(indexB, 1);
-//         }
-//       }
-//     });
-//   });
-//   callback(arr);
-// };
+  //   });
+  // });
+  callback(arr);
+};
 
 
 /*
@@ -143,7 +144,7 @@
   'The new names array with all the duplicate items removed is [UNIQARRPARAM].'
 */
 
-// uniq(namesArray, (uniqArr) => {console.log(`The new names array with all the duplicate items removed is ${uniqArr}.`)})
+uniq(namesArray, (uniqArr) => {console.log(`The new names array with all the duplicate items removed is ${uniqArr}.`)})
 
 
 
@@ -156,11 +157,11 @@
 
 // CODE HERE 
 
-// var namesArray = ['Tyler', 'Cahlan', 'Ryan', 'Colt', 'Tyler', 'Blaine', 'Cahlan'];
+var namesArray = ['Tyler', 'Cahlan', 'Ryan', 'Colt', 'Tyler', 'Blaine', 'Cahlan'];
 
-// const each = (arr, callback) => {
-//   arr.forEach((item, index) => callback(item, index))
-// }
+const each = (arr, callback) => {
+  arr.forEach((item, index) => callback(item, index))
+}
 
 /*
   Invoke the each function, passing in the names array and a callback function.
@@ -169,7 +170,7 @@
   'The item at index [INDEXPARAM] is [ITEMPARAM].'
 */
 
-// each(namesArray, (item, index) => console.log(`The item at ${index} is ${item}`))
+each(namesArray, (item, index) => console.log(`The item at ${index} is ${item}`))
 
 
 
@@ -207,21 +208,21 @@ var users = [
   When the correct user object is found, invoke the callback with the user object as an argument.
 */
 
-// const getUserById = (arr, id, callback) => {
-//   arr.forEach((name, index) => {
-//     if(name.id === id){
-//       callback(arr[index])
-//     }
-//   })
-// }
+const getUserById = (arr, id, callback) => {
+  arr.forEach((name, index) => {
+    if(name.id === id){
+      callback(arr[index])
+    }
+  })
+}
 
 // UNCOMMENT THE FUNCTION CALL BELOW
 // RUN THIS FILE WITH NODE
 // CHECK YOUR ANSWER
 
-// getUserById(users, '16t', user => {
-//   console.log('The user with the id 16t has the email of ' + user.email + ' the name of ' + user.name + ' and the address of ' + user.address) 
-// })
+getUserById(users, '16t', user => {
+  console.log('The user with the id 16t has the email of ' + user.email + ' the name of ' + user.name + ' and the address of ' + user.address) 
+})
 
 ////////// CHALLENGE //////////
 
