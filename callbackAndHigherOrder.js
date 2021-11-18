@@ -110,9 +110,9 @@
   Remove any duplicate values from the array, and invoke the callback with the modified array as an argument.
   Hint: you can use a nested for loop to do this.
 */
-var namesArray = ['Tyler', 'Cahlan', 'Ryan', 'Colt', 'Tyler', 'Blaine', 'Cahlan']
+// var namesArray = ['Tyler', 'Cahlan', 'Ryan', 'Colt', 'Tyler', 'Blaine', 'Cahlan']
 
-const uniq = (arr, callback) => {
+// const uniq = (arr, callback) => {
   // for(let i =0; i <arr.length; i++){
   //   for(let j = 0; j < arr.length; j++){
   //     if(i !== j){
@@ -123,17 +123,17 @@ const uniq = (arr, callback) => {
   //   }
   // }
 
-  arr.forEach((name, indexA) => {
-    arr.forEach((element,indexB) => {
-      if (indexA !== indexB) {
-        if (name === element) {
-          arr.splice(indexB, 1);
-        }
-      }
-    });
-  });
-  callback(arr);
-};
+//   arr.forEach((name, indexA) => {
+//     arr.forEach((element,indexB) => {
+//       if (indexA !== indexB) {
+//         if (name === element) {
+//           arr.splice(indexB, 1);
+//         }
+//       }
+//     });
+//   });
+//   callback(arr);
+// };
 
 
 /*
@@ -143,7 +143,7 @@ const uniq = (arr, callback) => {
   'The new names array with all the duplicate items removed is [UNIQARRPARAM].'
 */
 
-uniq(namesArray, (uniqArr) => {console.log(`The new names array with all the duplicate items removed is ${uniqArr}.`)})
+// uniq(namesArray, (uniqArr) => {console.log(`The new names array with all the duplicate items removed is ${uniqArr}.`)})
 
 
 
@@ -155,6 +155,9 @@ uniq(namesArray, (uniqArr) => {console.log(`The new names array with all the dup
 */
 
 // CODE HERE 
+
+// var namesArray = ['Tyler', 'Cahlan', 'Ryan', 'Colt', 'Tyler', 'Blaine', 'Cahlan'];
+
 // const each = (arr, callback) => {
 //   arr.forEach((item, index) => callback(item, index))
 // }
@@ -166,7 +169,7 @@ uniq(namesArray, (uniqArr) => {console.log(`The new names array with all the dup
   'The item at index [INDEXPARAM] is [ITEMPARAM].'
 */
 
-// each(names, (item, index) => console.log(`The item at ${index} is ${item}`))
+// each(namesArray, (item, index) => console.log(`The item at ${index} is ${item}`))
 
 
 
@@ -236,9 +239,9 @@ var users = [
   the two parameters together and return the sum.
 */
 
-// const addingFactory = number =>{
-//   return (num) =>
-// }
+const addingFactory = number =>{
+  return (num) => number+num
+}
 /*
   Now that you have addingFactory, you can create other
   functions from it. 
@@ -251,7 +254,7 @@ var users = [
   10 as an arguemnt.
 */
 
-// CODE HERE
+const addTen = addingFactory(10);
 
 /*
   Now the inner function is stored in the addTen variable! 
@@ -263,7 +266,8 @@ var users = [
   to see the different outputs.
 */
 
-// CODE HERE
+console.log(addTen(5))
+console.log(addTen(7));
 
 /*
   Let's make another function from the addingFactory. 
@@ -276,4 +280,5 @@ var users = [
   to add any number to your favorite number!
 */
 
-// CODE HERE
+const addNumberFifteen = addingFactory(15)
+console.log(addNumber(5));
